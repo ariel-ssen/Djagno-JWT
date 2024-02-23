@@ -2,7 +2,7 @@ from users.models import User
 from rest_framework import serializers
 # from rest_framework_simplejwt.serializers import TokenRefreshView
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
-from users.models import User as user
+# from users.models import User as user
 
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
@@ -32,10 +32,10 @@ class RegistrationSerializer(serializers.ModelSerializer):
         user.save()
         return user
                     
-class VerifyOTPSerializer(serializers.Serializer):
+# class VerifyOTPSerializer(serializers.Serializer):
 
-    email = serializers.EmailField()
-    otp = serializers.CharField()
+#     email = serializers.EmailField()
+#     otp = serializers.CharField()
 
 # class CustomTokenRefreshViewSerializer(TokenRefreshView):
 #     def validate(self, attrs):
