@@ -32,7 +32,7 @@ class UserManager(BaseUserManager):
 class User(AbstractBaseUser,PermissionsMixin):
 
     email = models.EmailField(unique=True)
-    user_name = models.CharField(max_length=100, unique=True)
+    user_name = models.CharField(max_length=100, unique=False)
     otp = models.CharField(max_length=10, null=True, blank=True)
     start_date = models.DateTimeField(default=timezone.now)
     is_staff = models.BooleanField(default=False)
